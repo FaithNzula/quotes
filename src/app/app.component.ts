@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { DialogueComponent } from './dialogue/dialogue.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularcrud';
+
+  constructor(private dialog : MatDialog) {
+    
+  }
+   openDialog() {
+    this.dialog.open(DialogueComponent, {
+      data: {
+ 
+      },
+    });
+  }
 }
