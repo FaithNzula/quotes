@@ -13,11 +13,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogueComponent } from './dialogue/dialogue.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogueComponent
+    DialogueComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatInputModule,
     MatSelectModule,
     MatDatepickerModule,
+    ReactiveFormsModule,
+    FormsModule,
     
     BrowserAnimationsModule
   ],

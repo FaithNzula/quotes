@@ -1,18 +1,21 @@
 <h1 mat-dialog-title> Add Quote Form </h1>
 <div mat-dialog-content>
+ <form [formGroup]= "productForm">
     <mat-form-field appearance="outline">
     <mat-label>first Name</mat-label>
-    <input matInput placeholder="Full Name">
+    <input formControlName="First Name" matInput placeholder="Full Name">
     </mat-form-field>
     <mat-form-field appearance="outline">
-    <mat-label>Second Name</mat-label>
+    <mat-label formControlName="Second Name">Second Name</mat-label>
     <input matInput placeholder="Second Name">
     </mat-form-field>
     
     
      <mat-form-field appearance="outline">
     <mat-label>Quote </mat-label>
-    <input matInput placeholder="Your Qoute">
+    <input formControlName="Qoute"matInput placeholder="Your Qoute">
+     </mat-form-field>
+   
     
 
 
@@ -27,9 +30,10 @@
      
     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
     <mat-hint>Hint</mat-hint>
-  </mat-form-field>
+ 
+   </form>
 </div>
 <div mat-dialog-action [align]="' end'">
 <button mat-raised-button color="warn" matDialogClose="">close</button>
-<button style="margin-left: 8px;" mat-raised-button color="primary">save</button>
+<button style="margin-left: 8px;" mat-raised-button color="primary"(click)= "addQoute()">save</button>
 </div>
