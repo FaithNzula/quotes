@@ -10,10 +10,10 @@ import { ApiService } from '../service/api.service';
 export class DialogueComponent implements OnInit {
   productForm !: FormGroup;       
 
-  constructor(private FormBuilder : FormBuilder, private api : ApiService) { }
+  constructor(private formBuilder : FormBuilder , private api : ApiService) { }
 
   ngOnInit(): void {
-  this.productForm = this.FormBuilder.group({
+  this.productForm = this.formBuilder.group({
       productName: ['', Validators.required],
       FirstName: ['', Validators.required],
       SecondName: ['', Validators.required],
@@ -28,12 +28,17 @@ export class DialogueComponent implements OnInit {
       this.api.postProduct(this.productForm.value)
         .subscribe({
           next: (res) => {
-            alert ("Product Added Succesfully")
+            alert("product added succesfully");
+            this.productForm.reset();
+          },
+          error: () => {
+            alert("Error while adding the product")
             
-        }
+          }
+        
       })
-    }
-
+  
+}
   }
 
 }
