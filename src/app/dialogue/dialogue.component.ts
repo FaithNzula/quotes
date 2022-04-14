@@ -28,6 +28,7 @@ export class DialogueComponent implements OnInit {
       this.api.postProduct(this.productForm.value)
         .subscribe({
           next: (res) => {
+            alert ("Product Added Succesfully")
             
         }
       })
