@@ -24,7 +24,15 @@ export class DialogueComponent implements OnInit {
     
   }
   addQoute() {
-    console.log(this.productForm.value);
+    if (this.productForm.valid) {
+      this.api.postProduct(this.productForm.value)
+        .subscribe({
+          next: (res) => {
+            
+        }
+      })
+    }
+
   }
 
 }
