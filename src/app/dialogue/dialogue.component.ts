@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup , FormBuilder , Validators} from '@angular/forms';
+import { ApiService } from '../service/api.service';
 
 @Component({
   selector: 'app-dialogue',
@@ -9,7 +10,7 @@ import { FormGroup , FormBuilder , Validators} from '@angular/forms';
 export class DialogueComponent implements OnInit {
   productForm !: FormGroup;       
 
-  constructor(private FormBuilder : FormBuilder) { }
+  constructor(private FormBuilder : FormBuilder, private api : ApiService) { }
 
   ngOnInit(): void {
   this.productForm = this.FormBuilder.group({
