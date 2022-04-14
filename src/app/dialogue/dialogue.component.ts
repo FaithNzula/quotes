@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup , FormBuilder , Validators} from '@angular/forms';
 import { ApiService } from '../service/api.service';
-
+import{MatDialogRef} from '@angular/material/dialog'
 @Component({
   selector: 'app-dialogue',
   templateUrl: './dialogue.component.html',
