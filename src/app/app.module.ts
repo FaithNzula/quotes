@@ -15,6 +15,7 @@ import { DialogueComponent } from './dialogue/dialogue.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DialogComponent } from './dialog/dialog.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { DialogComponent } from './dialog/dialog.component';
     MatDatepickerModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
     
     BrowserAnimationsModule
   ],
