@@ -14,7 +14,7 @@ export class DialogueComponent implements OnInit {
 
   ngOnInit(): void {
   this.productForm = this.formBuilder.group({
-      productName: ['', Validators.required],
+
       FirstName: ['', Validators.required],
       SecondName: ['', Validators.required],
       Qoute : [ '', Validators.required],
@@ -30,14 +30,14 @@ export class DialogueComponent implements OnInit {
           next: (res) => {
             alert("product added succesfully");
             this.productForm.reset();
-            this.dialogRef.close();
+            this.dialogRef.close()
           },
           error: () => {
             alert("Error while adding the product")
             
           }
         
-        });
+      })
   
 }
   }
